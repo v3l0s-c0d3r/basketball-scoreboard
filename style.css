@@ -9,7 +9,7 @@
     --color-score:       rgb(187, 8, 8);
 
     --font-display: 'Cursed Timer', sans-serif;
-    --font-ui:       'Tahoma', Tahoma, Geneva, Verdana, sans-serif;
+    --font-ui:       Tahoma, 'Tahoma', Geneva, Verdana, sans-serif;
 
     /* clamp(min, fluid, max) — scales between viewport widths */
     --fs-heading:  clamp(3rem,  8vw,  18rem);
@@ -62,7 +62,7 @@ body {
     & h3 {
         font-family: var(--font-ui);
         font-size: var(--fs-heading);
-        font-weight: 800;
+        font-weight: bolder;
     }
 }
 
