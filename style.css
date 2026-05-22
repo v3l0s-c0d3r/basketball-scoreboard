@@ -1,0 +1,114 @@
+/* ── Global Styles (notes taken by Claude AI) ─────────────────────────────────────── */
+
+/* ── Tokens ─────────────────────────────────────────── */
+:root {
+    --color-bg:          rgb(0, 0, 90);
+    --color-bg-dark:     rgb(0, 0, 50);
+    --color-text:        #fff;
+    --color-text-muted:  #ddddddf1;
+    --color-score:       rgb(187, 8, 8);
+
+    --font-display: 'Cursed Timer', sans-serif;
+    --font-ui:       Tahoma, Geneva, Verdana, sans-serif;
+
+    /* clamp(min, fluid, max) — scales between viewport widths */
+    --fs-heading:  clamp(3rem,  8vw,  18rem);
+    --fs-score:    clamp(5rem, 12vw,  22rem);
+    --fs-btn:      clamp(1.2rem, 3vw,  4.5rem);
+}
+
+/* ── Font ────────────────────────────────────────────── */
+@font-face {
+    font-family: 'Cursed Timer';
+    src: url('/fonts/CursedTimer.ttf') format('truetype');
+    font-display: swap;
+}
+
+/* ── Reset ───────────────────────────────────────────── */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ── Layout ──────────────────────────────────────────── */
+body {
+    min-height: 100vh;
+    margin: 2em 0;
+    color: var(--color-text);
+    background-color: var(--color-text-muted);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    border: 8px groove goldenrod;
+    border-radius: 25px;
+    background-color: var(--color-bg);
+    box-shadow: 0 2px 20px var(--color-bg-dark);
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 3em;
+
+    & h3 {
+        font-family: var(--font-ui);
+        font-size: var(--fs-heading);
+    }
+}
+
+/* ── Components ──────────────────────────────────────── */
+.display-el {
+    min-width: 500px;
+    max-width: 500px;
+    background-color: var(--color-bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-display);
+    font-size: var(--fs-score);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    margin-block-start: 0.25em;
+    color: var(--color-score);
+}
+
+.score-btns {
+    display: flex;
+    justify-content: center;
+    margin-block-start: 2.5em;
+
+    & button {
+        padding: 0.5em 0.8em;
+        font-family: var(--font-display);
+        font-size: var(--fs-btn);
+        margin-inline: 0.2em;
+        border-radius: 5px;
+        border: 2px solid var(--color-text-muted);
+        background-color: var(--color-bg);
+        color: var(--color-text-muted);
+        cursor: pointer;
+    }
+}
+
+p {
+    margin-top: 2.5em;
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    color: var(--color-bg);
+}
+
+/* ── Mobile responsiveness ──────────────────────────────────────────── */
+@media (max-width: 450px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flask {
+        margin-block: 1.5em;
+    }
+}

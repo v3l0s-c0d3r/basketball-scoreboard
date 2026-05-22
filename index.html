@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Solo Project - Basketball Scoreboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="flask">
+            <h3>HOME</h3>
+            <div class="display-el" id="home-display"></div>
+            <span class="score-btns">
+                <button onclick="updateScore('home', 1)">+1</button>
+                <button onclick="updateScore('home', 2)">+2</button>
+                <button onclick="updateScore('home', 3)">+3</button>
+            </span>
+        </div>
+        <div class="flask">
+            <h3>GUEST</h3>
+            <div class="display-el" id="guest-display"></div>
+            <span class="score-btns">
+                <button onclick="updateScore('guest', 1)">+1</button>
+                <button onclick="updateScore('guest', 2)">+2</button>
+                <button onclick="updateScore('guest', 3)">+3</button>
+            </span>
+        </div>
+    </div>
+
+    <p>Basketball Icon by Vincent Le Moign on <a href="https://icon-icons.com/authors/514-vincent-le-moign">Icon-Icons.com</a></p>
+    <script src="index.js"></script>
+</body>
+</html>
