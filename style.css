@@ -62,7 +62,7 @@ body {
     & h3 {
         font-family: var(--font-ui);
         font-size: var(--fs-heading);
-        font-weight: bold;
+        font-weight: 800;
     }
 }
 
